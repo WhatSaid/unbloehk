@@ -1,0 +1,86 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#searchBar {
+    width: 60%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+}
+
+/* Game Grid Layout */
+#gameGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.game-card {
+    background: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+.game-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.game-card p {
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    width: 80%;
+    height: 80%;
+}
+
+#gameFrame {
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.close-btn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 40px;
+    cursor: pointer;
+}
